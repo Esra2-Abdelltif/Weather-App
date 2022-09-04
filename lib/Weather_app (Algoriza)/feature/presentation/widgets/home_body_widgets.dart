@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/Core/styles/images.dart';
-import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/widgets/header.dart';
+import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/widgets/current_weather_widget.dart';
 
 class HomeBodyWidgets extends StatelessWidget {
   const HomeBodyWidgets({Key? key}) : super(key: key);
@@ -158,7 +158,7 @@ class HomeBodyWidgets extends StatelessWidget {
                           ],
                         ),
                       ),
-            Header()
+            CurrentWeatherWidget()
 
 
           ]),

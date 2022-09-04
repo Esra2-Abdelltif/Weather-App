@@ -7,9 +7,9 @@ import '../../../Core/utils/enums.dart';
 import 'package:intl/intl.dart';
 
 
-class Header extends StatelessWidget {
+class CurrentWeatherWidget extends StatelessWidget {
 
-  const Header({Key? key}) : super(key: key);
+  const CurrentWeatherWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

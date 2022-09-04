@@ -9,7 +9,7 @@ void main() async{
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   WidgetsFlutterBinding.ensureInitialized();
   ServiceLocator().init();
-  //Preferences.init();
+
   LocationPermission permission;
   permission = await Geolocator.checkPermission();
   if (permission == LocationPermission.denied) {

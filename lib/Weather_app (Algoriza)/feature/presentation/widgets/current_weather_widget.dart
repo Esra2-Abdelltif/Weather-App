@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lottie/lottie.dart';
+import 'package:weather_app/Weather_app%20(Algoriza)/Core/styles/images.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/manager/weather_bloc.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/manager/weather_state.dart';
 import '../../../Core/utils/enums.dart';
@@ -44,7 +45,7 @@ class CurrentWeatherWidget extends StatelessWidget {
                                     style: const TextStyle(
                                         color: Colors.white,
                                         fontSize: 35,
-                                        fontWeight: FontWeight.w400),
+                                        fontWeight: FontWeight.w800),
                                   ),
                                   const SizedBox(
                                     height: 10,
@@ -56,106 +57,112 @@ class CurrentWeatherWidget extends StatelessWidget {
                                         fontSize: 15,
                                         fontWeight: FontWeight.w400),
                                   ),
-                                  // LottieBuilder.asset(
-                                  //   wind,
-                                  //   height: size.height * 0.2,
-                                  //   width: size.height * 0.1,
-                                  // ),
-                                   Text(
-                                    state.currentWeather!.weatherDescription,
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 35,
-                                        fontWeight: FontWeight.w800),
+                                   LottieBuilder.asset(
+                                     "${ DateFormat(' a').format(DateTime.now()) =="AM"? evening:morning}"
+                                    , height: size.height * 0.22,
+                                    width: size.width * 0.4,
                                   ),
-                                  const SizedBox(
-                                    height: 5,
-                                  ),
-                                   Text(
+                                  Text(
                                     "${state.currentWeather!.temperature.toInt()} \u00B0",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 80,
                                         fontWeight: FontWeight.w800),
                                   ),
+                                  const SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    state.currentWeather!.weatherDescription.toString(),
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.w400),
+                                  ),
                                   Row(
                                     children: [
-                                      Column(
-                                        children: [
-                                          // LottieBuilder.asset(
-                                          //   humidity,
-                                          //   height: size.height * 0.1,
-                                          //   width: size.width * 0.2,
-                                          // ),
-                                          const Text(
-                                            "81",
-                                            style: const TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
-                                          Text(
-                                            "humidity",
-                                            style: TextStyle(
-                                                color: Colors.white.withOpacity(.6),
-                                                fontSize: 17,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ],
+                                      Expanded(
+                                        child: Column(
+                                          children: [
+                                             LottieBuilder.asset(
+                                               humidity,
+                                               height: size.height * 0.1,
+                                               width: size.width * 0.2,
+                                             ),
+                                             Text(
+                                              '${state.currentWeather!.humidity.toInt()} %',
+                                              style: const TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Text(
+                                              "humidity",
+                                              style: TextStyle(
+                                                  color: Colors.white.withOpacity(.6),
+                                                  fontSize: 17,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                      Column(
-                                        children: [
-                                          // LottieBuilder.asset(
-                                          //   wind,
-                                          //   height: size.height * 0.1,
-                                          //   width: size.width * 0.2,
-                                          // ),
-                                          Text(
-                                            "${state.currentWeather!.humidity.toInt()}",
-                                            style: const TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
-                                          Text("${state.currentWeather!.speed.toInt()}",
-                                            style: TextStyle(
-                                                color: Colors.white.withOpacity(.6),
-                                                fontSize: 17,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ],
+                                      Expanded(
+                                        child: Column(
+                                          children: [
+                                            LottieBuilder.asset(
+                                              wind,
+                                              height: size.height * 0.1,
+                                              width: size.width * 0.2,
+                                            ),
+                                            Text(
+                                              "${state.currentWeather!.speed.toInt()} km/h",
+                                              style: const TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Text("Wind",
+                                              style: TextStyle(
+                                                  color: Colors.white.withOpacity(.6),
+                                                  fontSize: 17,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
                                       ),
-                                      Column(
-                                        children: [
-                                          // LottieBuilder.asset(
-                                          //   sunset,
-                                          //   height: size.height * 0.1,
-                                          //   width: size.width * 0.2,
-                                          // ),
-                                          const Text(
-                                            "SE",
-                                            style: const TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                          const SizedBox(
-                                            height: 10,
-                                          ),
-                                          Text(
-                                            "wind Direction",
-                                            style: TextStyle(
-                                                color: Colors.white.withOpacity(.6),
-                                                fontSize: 17,
-                                                fontWeight: FontWeight.bold),
-                                          ),
-                                        ],
+                                      Expanded(
+                                        child: Column(
+                                          children: [
+                                            LottieBuilder.asset(
+                                              uvIndex,
+                                              height: size.height * 0.1,
+                                              width: size.width * 0.2,
+                                            ),
+                                            const Text(
+                                              "Low",
+                                              style: const TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 10,
+                                            ),
+                                            Text(
+                                              "UV index",
+                                              style: TextStyle(
+                                                  color: Colors.white.withOpacity(.6),
+                                                  fontSize: 17,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          ],
+                                        ),
                                       )
                                     ],
                                   )

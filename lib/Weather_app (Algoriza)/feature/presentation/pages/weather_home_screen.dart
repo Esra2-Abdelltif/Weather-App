@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:intl/intl.dart';
-import 'package:lottie/lottie.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/Core/service/service_locator.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/manager/weather_bloc.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/manager/weather_event.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/widgets/build_drawer.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/widgets/home_body_widgets.dart';
-import '../../../../Weather_app%20(Algoriza)/Core/styles/images.dart';
 
 class WeatherHomeScreen extends StatelessWidget {
   late String cityName='suez';
@@ -16,7 +13,7 @@ class WeatherHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return BlocProvider(
-        create: (BuildContext context) => sl<WeatherBloc>()..add(GetCurrentWeatherEvent())..add(GetCurrentWeatherByCityEvent(cityName)),
+        create: (BuildContext context) => sl<WeatherBloc>()..add(GetCurrentWeatherEvent())..add(GetCurrentWeatherByCityEvent(cityName))..add(GetDailyWeatherEvent()),
 
       child: Scaffold(
         backgroundColor: const Color(0xff081b25),

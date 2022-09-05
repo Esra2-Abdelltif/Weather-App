@@ -17,3 +17,4 @@ class GetCurrentWeatherByCityEvent extends WeatherEvent {
   @override
   List<Object?> get props => [city];
 }
+class GetDailyWeatherEvent extends WeatherEvent {}

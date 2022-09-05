@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/Core/error/exceptions.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/Core/service/service_locator.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/pages/weather_home_screen.dart';
+import 'package:weather_app/my_app.dart';
+import 'package:weather_app/observer_bloc.dart';
 
 void main() async{
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
@@ -21,21 +24,13 @@ void main() async{
   if (!await Geolocator.isLocationServiceEnabled()) {
     throw LocationDisabledException();
   }
-  runApp(const MyApp());
+  BlocOverrides.runZoned( () {
+    runApp( MyApp());
+
+  },
+    blocObserver: MyBlocObserver(),
+  );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-       theme: ThemeData.dark(),
-      home:  WeatherHomeScreen(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
-}
 

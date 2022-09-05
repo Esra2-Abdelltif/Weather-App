@@ -13,17 +13,7 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   ServiceLocator().init();
 
-  LocationPermission permission;
-  permission = await Geolocator.checkPermission();
-  if (permission == LocationPermission.denied) {
-    permission = await Geolocator.requestPermission();
-    if (permission == LocationPermission.deniedForever) {
-      return Future.error('Location Not Available');
-    }
-  }
-  if (!await Geolocator.isLocationServiceEnabled()) {
-    throw LocationDisabledException();
-  }
+
   BlocOverrides.runZoned( () {
     runApp( MyApp());
 

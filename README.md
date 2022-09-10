@@ -35,9 +35,16 @@ ScreenShoot:
 
 
 App Dark Mode:
-|Home Screen         |   Drawer       |  Search Screen             
+|       Drawer    |   Home Screen     |  Search Screen             
 ------------------------:|:-------------------------:|:-------------------------:
 ![Screenshot_20220910-122913](https://user-images.githubusercontent.com/72301777/189479424-d06f2862-4d22-4fad-9437-8eb525277e58.jpg)|![Screenshot_20220910-122907](https://user-images.githubusercontent.com/72301777/189479404-a97d4e9e-e0be-4cf1-9b6f-fbb8274429b7.jpg)|![Screenshot_20220910-122919](https://user-images.githubusercontent.com/72301777/189479429-eb857808-bf57-418e-aa7b-e8572da4a8ec.jpg)
 
+
+
+
+App Light Mode:
+|       Drawer    |   Home Screen     |  Search Screen             
+------------------------:|:-------------------------:|:-------------------------:
+![Screenshot_20220910-122913](https://user-images.githubusercontent.com/72301777/189479424-d06f2862-4d22-4fad-9437-8eb525277e58.jpg)|![Screenshot_20220910-122907](https://user-images.githubusercontent.com/72301777/189479404-a97d4e9e-e0be-4cf1-9b6f-fbb8274429b7.jpg)|![Screenshot_20220910-122919](https://user-images.githubusercontent.com/72301777/189479429-eb857808-bf57-418e-aa7b-e8572da4a8ec.jpg)
 
 

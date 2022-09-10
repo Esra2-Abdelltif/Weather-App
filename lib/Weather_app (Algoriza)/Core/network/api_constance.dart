@@ -9,5 +9,7 @@ class ApiConstance {
   static String weatherIcon(String icon) => "https://merakiapp.be/wp-content/uploads/2022/04/$icon.png";
 }
 //
-// https://api.openweathermap.org/data/2.5/weather?q=suez&appid=d0d253c5dca7fb4ab6caf8ec961238f2
-// https://api.openweathermap.org/data/2.5onecall?lat=$latitude&lon=$longitude&exclude=daily,minutely,current,alerts&units=metric&appid=d0d253c5dca7fb4ab6caf8ec961238f2
+// https://api.openweathermap.org/data/2.5/weather?q=suez&appid=d0d253c5dca7fb4ab6caf8ec961238f2,
+// https://api.openweathermap.org/data/2.5/onecall?lat=29.9737&lon=32.5263&exclude=daily,minutely,current,alerts&units=metric&appid=d0d253c5dca7fb4ab6caf8ec961238f2"
+// https://api.openweathermap.org/data/2.5/onecall?lat=29.9737&lon=32.5263&exclude=daily,minutely,current,alerts&units=metric&appid=d0d253c5dca7fb4ab6caf8ec961238f2
+//https://api.openweathermap.org/data/2.5/onecall?lat=29.9737&lon=32.5263&appid=d0d253c5dca7fb4ab6caf8ec961238f2&units=metric&cnt=7

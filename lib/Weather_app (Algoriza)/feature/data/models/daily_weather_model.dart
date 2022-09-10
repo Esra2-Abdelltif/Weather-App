@@ -2,10 +2,10 @@ import 'package:weather_app/Weather_app%20(Algoriza)/feature/domain/entities/dai
 
 class DailyWeatherModel extends DailyWeather {
   DailyWeatherModel(
-      {required double tempMin,
-      required double tempMax,
-      required int humidity,
-      required int date,
+      {required num tempMin,
+      required num tempMax,
+      required num humidity,
+      required num date,
       required String icon})
       : super(
             tempMin: tempMin,

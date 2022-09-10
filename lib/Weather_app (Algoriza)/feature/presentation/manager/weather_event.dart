@@ -9,7 +9,6 @@ abstract class WeatherEvent extends Equatable {
 }
 
 class GetCurrentWeatherEvent extends WeatherEvent {}
-
 class GetCurrentWeatherByCityEvent extends WeatherEvent {
   final String city;
   const GetCurrentWeatherByCityEvent(this.city);
@@ -18,3 +17,4 @@ class GetCurrentWeatherByCityEvent extends WeatherEvent {
   List<Object?> get props => [city];
 }
 class GetDailyWeatherEvent extends WeatherEvent {}
+class GetHourlyWeatherEvent extends WeatherEvent {}

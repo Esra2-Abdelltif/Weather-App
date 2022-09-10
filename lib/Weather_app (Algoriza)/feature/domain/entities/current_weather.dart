@@ -1,18 +1,20 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/cupertino.dart';
 
 class CurrentWeather extends Equatable {
   final String cityName;
   final String country;
-  final double temperature;
+  final num temperature;
   final String weatherDescription;
-  final double feelsLikeTemperature;
-  final double maxTemperature;
-  final double minTemperature;
-  final int humidity;
-  final int pressure;
-  final int sunrise;
-  final int sunset;
-  final double speed;
+  final num feelsLikeTemperature;
+  final num maxTemperature;
+  final num minTemperature;
+  final num humidity;
+  final num pressure;
+  final num sunrise;
+  final num sunset;
+  final num speed;
+  final String weatherIcon;
 
 
   const CurrentWeather({
@@ -23,6 +25,7 @@ class CurrentWeather extends Equatable {
     required this.feelsLikeTemperature,
     required this.humidity,
     required this.pressure,
+    required this.weatherIcon,
     required this.sunrise,
     required this.sunset,
     required this.speed,
@@ -43,6 +46,7 @@ class CurrentWeather extends Equatable {
     sunset,
     speed,
     maxTemperature,
-    minTemperature
+    minTemperature,
+    weatherIcon
   ];
 }

@@ -1,7 +1,9 @@
 import 'package:equatable/equatable.dart';
-import 'package:weather_app/Weather_app%20(Algoriza)/Core/utils/enums.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/domain/entities/current_weather.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/domain/entities/daily_weather.dart';
+import 'package:weather_app/Weather_app%20(Algoriza)/feature/domain/entities/hourly_weather.dart';
+import 'package:weather_app/Weather_app%20(Algoriza)/Core/utils/enums.dart';
+
 
 class WeatherState extends Equatable {
   final CurrentWeather? currentWeather;
@@ -16,21 +18,30 @@ class WeatherState extends Equatable {
   final String dailyMessage;
   final RequestState dailyRequestState;
 
-  const WeatherState(
-      {this.currentWeather,
-      this.currentMessage = '',
-      this.currentRequestState = RequestState.loading,
-      this.currentWeatherByCity,
-      this.currentMessageByCity = '',
-      this.currentRequestStateByCity = RequestState.loading,
-      this.dailyWeather = const [],
-      this.dailyMessage = "",
-      this.dailyRequestState = RequestState.loading});
+  final List<HourlyWeather> hourlyWeather;
+  final String hourlyMessage;
+  final RequestState hourlyRequestState;
+
+  const WeatherState({
+    this.currentWeather,
+    this.currentMessage = '',
+    this.currentRequestState = RequestState.loading,
+    this.currentWeatherByCity,
+    this.currentMessageByCity = '',
+    this.currentRequestStateByCity = RequestState.loading,
+    this.dailyWeather = const [],
+    this.dailyMessage = "",
+    this.dailyRequestState = RequestState.loading,
+    this.hourlyWeather = const [],
+    this.hourlyMessage = "",
+    this.hourlyRequestState = RequestState.loading,
+  });
 
   WeatherState copyWith({
     CurrentWeather? currentWeather,
     CurrentWeather? currentWeatherByCity,
     List<DailyWeather>? dailyWeather,
+    List<HourlyWeather>? hourlyWeather,
     RequestState? currentRequestState,
     RequestState? dailyRequestState,
     RequestState? hourlyRequestState,
@@ -42,15 +53,18 @@ class WeatherState extends Equatable {
   }) {
     return WeatherState(
       currentWeather: currentWeather ?? this.currentWeather,
-      currentMessage: currentMessage ?? this.currentMessage,
-      currentRequestState: currentRequestState ?? this.currentRequestState,
       currentWeatherByCity: currentWeatherByCity ?? this.currentWeatherByCity,
-      currentMessageByCity: currentMessageByCity ?? this.currentMessageByCity,
-      currentRequestStateByCity: currentRequestStateByCity ?? this.currentRequestStateByCity,
       dailyWeather: dailyWeather ?? this.dailyWeather,
+      hourlyWeather: hourlyWeather ?? this.hourlyWeather,
+      currentRequestState: currentRequestState ?? this.currentRequestState,
+      dailyRequestState: dailyRequestState ?? this.dailyRequestState,
+      hourlyRequestState: hourlyRequestState ?? this.hourlyRequestState,
+      currentRequestStateByCity:
+          currentRequestStateByCity ?? this.currentRequestStateByCity,
+      currentMessage: currentMessage ?? this.currentMessage,
       dailyMessage: dailyMessage ?? this.dailyMessage,
-      dailyRequestState:  dailyRequestState ?? this.dailyRequestState,
-
+      hourlyMessage: hourlyMessage ?? this.hourlyMessage,
+      currentMessageByCity: currentMessageByCity ?? this.currentMessageByCity,
     );
   }
 
@@ -64,6 +78,9 @@ class WeatherState extends Equatable {
         currentMessageByCity,
         dailyRequestState,
         dailyMessage,
-        dailyWeather
+        dailyWeather,
+        hourlyMessage,
+        hourlyRequestState,
+        hourlyWeather
       ];
 }

@@ -1,25 +1,31 @@
 import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/Core/useCases/base_useCase.dart';
-import 'package:weather_app/Weather_app%20(Algoriza)/Core/utils/enums.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/domain/use_cases/get_current_weather_usecase.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/domain/use_cases/get_daily_weather_usecase.dart';
+import 'package:weather_app/Weather_app%20(Algoriza)/feature/domain/use_cases/get_hourly_weather_use_case.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/domain/use_cases/get_weather_by_ciry_use_case.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/manager/weather_event.dart';
 import 'package:weather_app/Weather_app%20(Algoriza)/feature/presentation/manager/weather_state.dart';
+import 'package:weather_app/Weather_app%20(Algoriza)/Core/utils/enums.dart';
+
+import '../../../Core/utils/enums.dart';
 
 class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
   final GetCurrentWeatherUseCase getCurrentWeatherUseCase;
   final GetWeatherByCityUserCase getWeatherByCityUserCase;
   final GetDailyWeatherUseCase getDailyWeatherUseCase;
+  final GetHourlyWeatherUseCase getHourlyWeatherUseCase;
 
 
 
-  WeatherBloc(this.getCurrentWeatherUseCase, this.getWeatherByCityUserCase, this.getDailyWeatherUseCase)
+
+  WeatherBloc(this.getCurrentWeatherUseCase, this.getWeatherByCityUserCase, this.getDailyWeatherUseCase,this.getHourlyWeatherUseCase )
       : super(const WeatherState()){
     on<GetCurrentWeatherEvent>(_getCurrentWeather);
     on<GetCurrentWeatherByCityEvent>(_getWeatherByCity);
     on<GetDailyWeatherEvent>(_getDailyWeather);
+    on<GetHourlyWeatherEvent>(_getHourlyWeather);
   }
 
   Future <void> _getCurrentWeather(GetCurrentWeatherEvent event ,Emitter<WeatherState>emit) async {
@@ -48,4 +54,13 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
             (r) => emit(state.copyWith(dailyWeather: r, dailyRequestState: RequestState.loaded))
     );
   }
+
+  Future <void> _getHourlyWeather(GetHourlyWeatherEvent event ,Emitter<WeatherState>emit) async {
+    final result = await getHourlyWeatherUseCase.call(const NoParameters());
+    result.fold(
+            (l) => emit(state.copyWith(hourlyRequestState: RequestState.error, hourlyMessage: l.message)),
+            (r) => emit(state.copyWith(hourlyWeather: r, hourlyRequestState: RequestState.loaded))
+    );
+  }
+
 }

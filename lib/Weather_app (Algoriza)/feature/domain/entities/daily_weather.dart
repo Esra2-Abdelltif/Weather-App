@@ -1,10 +1,10 @@
 import 'package:equatable/equatable.dart';
 
 class DailyWeather extends Equatable {
-  double tempMin;
-  double tempMax;
-  int humidity;
-  int date;
+  num tempMin;
+  num tempMax;
+  num humidity;
+  num date;
   String icon;
 
   DailyWeather(

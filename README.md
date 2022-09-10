@@ -16,8 +16,8 @@ Built with Flutter clean Archiecture:
 
 Using Flutter Package:
 
+![package](https://user-images.githubusercontent.com/72301777/189478935-3c44504a-422f-405d-94fb-75f77a67b8bd.PNG)
 
-![bloc](https://user-images.githubusercontent.com/72301777/189478765-b86a67e4-3110-4bbd-9256-4e4b778ddeff.PNG)
 
 
 
@@ -27,6 +27,9 @@ ScreenShoot:
 
 | Weather Logo Logo           |    access Location        |  Splash Screen              
 ------------------------:|:-------------------------:|:-------------------------:
-![Screenshot_20220826-001228_One UI Home](https://user-images.githubusercontent.com/72301777/186778290-41bd028a-9187-4e6f-9af7-3d8195a9303d.jpg) |![Screenshot_20220825-234922](https://user-images.githubusercontent.com/72301777/186775429-02d14469-53fb-43aa-9a92-be263baefa40.jpg)| ![Screenshot_20220825-232436](https://user-images.githubusercontent.com/72301777/186775455-7f8fce04-6c2a-4c19-9ffd-6a5a79be6667.jpg)
+![Screenshot_20220910-121320_One UI Home](https://user-images.githubusercontent.com/72301777/189478945-1fa07430-a3d4-4e8c-86df-384100babddf.jpg)
+ |![Screenshot_20220910-121331_Permission controller](https://user-images.githubusercontent.com/72301777/189478959-5339c226-c4f0-4e07-80e9-377cec5cb626.jpg)
+|![Screenshot_20220910-121352](https://user-images.githubusercontent.com/72301777/189478968-bc2052cb-4f8e-471f-91ed-e8bf401404ae.jpg)
+
 
 

@@ -8,6 +8,8 @@ It's an application with beautiful UI that built with Flutter using:
 - using Package geolocator to get Current Location.
 -  using Package lottie .
 - using Package day_night_switcher to change Theme Mode.
+- section Favourite get current location name and temperature.
+- section magange Location navigate To Search Screen to get Weather Data By City Name.
 
 
 Built with Flutter clean Archiecture:

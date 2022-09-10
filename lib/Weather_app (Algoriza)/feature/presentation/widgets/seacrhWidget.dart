@@ -81,7 +81,7 @@ class WeatherByCityWidget extends StatelessWidget {
                             children: [
                               Text(
                                 state.currentWeatherByCity!.weatherDescription,
-                                style: TextStyle(fontSize: 30, height: 0.1,color: AppColors.whiteColor),
+                                style: TextStyle(fontSize:  size.width * 0.06, height: 0.1,color: AppColors.whiteColor),
                               ),
                               Container(
                                 height: 70,

@@ -79,7 +79,7 @@ class DialyTable extends StatelessWidget {
                                         style: TextStyle(
                                           fontSize: context.height15,
                                           fontWeight: FontWeight.w500,
-                                          color: Colors.white70,
+                                          color:Colors.grey.withOpacity(.6),
                                         ),
                                       ),
                                       SizedBox(width: context.height30),

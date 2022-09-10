@@ -53,7 +53,7 @@ class StatusWidgetByCityName extends StatelessWidget {
                         Text(
                           AppStrings.humidity,
                           style: TextStyle(
-                              color: AppColors.whiteColor.withOpacity(.6),
+                              color: Colors.grey.withOpacity(.6),
                               fontSize: 17,
                               fontWeight: FontWeight.bold),
                         ),
@@ -79,7 +79,7 @@ class StatusWidgetByCityName extends StatelessWidget {
                         Text(
                           AppStrings.wind,
                           style: TextStyle(
-                              color: AppColors.whiteColor.withOpacity(.6),
+                              color: Colors.grey.withOpacity(.6),
                               fontSize: 17,
                               fontWeight: FontWeight.bold),
                         ),
@@ -105,7 +105,7 @@ class StatusWidgetByCityName extends StatelessWidget {
                         Text(
                           AppStrings.uv,
                           style: TextStyle(
-                              color: AppColors.whiteColor.withOpacity(.6),
+                              color:Colors.grey.withOpacity(.6),
                               fontSize: 17,
                               fontWeight: FontWeight.bold),
                         ),

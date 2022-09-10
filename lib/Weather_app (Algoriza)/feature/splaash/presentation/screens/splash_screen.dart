@@ -34,7 +34,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.colorSplash,
+      appBar: AppBar(),
+      // backgroundColor: AppColors.colorSplash,
       body: Column(
         children: [
           Spacer(),
@@ -48,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
           Spacer(),
           Text(
             AppStrings.weather,
-            style: TextStyle(fontSize: 24, color: AppColors.whiteColor,fontWeight: FontWeight.w500,),
+            style: TextStyle(fontSize: 24,fontWeight: FontWeight.w500,),
           ),
           SizedBox(
             height: 80,

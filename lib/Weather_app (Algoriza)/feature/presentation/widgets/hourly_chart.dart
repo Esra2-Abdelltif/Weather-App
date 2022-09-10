@@ -32,13 +32,13 @@ class HourlyChart extends StatelessWidget {
               child: SfCartesianChart(
                 primaryXAxis: CategoryAxis(
                   labelStyle:  TextStyle(
-                    color: AppColors.whiteColor,
+
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 primaryYAxis: NumericAxis(
                   labelStyle:  TextStyle(
-                    color: AppColors.whiteColor,
+
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -50,7 +50,6 @@ class HourlyChart extends StatelessWidget {
 
                     yValueMapper: (HourlyWeather weather,_) => weather.temperature,
 
-                    color: Colors.white,
                   ),
                 ],
               ),

@@ -20,10 +20,8 @@ class FavouriteLocation extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: Row(children: [
-
                   Icon(
                     Icons.location_pin,
-                    color:Colors.white,
                     size: 24,
 
                   ),
@@ -31,13 +29,13 @@ class FavouriteLocation extends StatelessWidget {
                   Text(
                     state.currentWeather!.cityName,
                     style:
-                    TextStyle(color: Colors.white, fontSize: 24),
+                    TextStyle( fontSize: 24),
                   ),
                   Spacer(),
                   Text(
                    "${ state.currentWeather!.temperature.toInt()} \u00B0",
                     style:
-                    TextStyle(color: Colors.white, fontSize: 24),
+                    TextStyle( fontSize: 24),
                   ),
                 ],),
               );

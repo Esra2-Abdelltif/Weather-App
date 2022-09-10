@@ -30,7 +30,7 @@ class WeatherByCityScreen extends StatelessWidget {
             onTap: (){
               NavigateTo(router: WeatherHomeScreen(),context: context);
             },
-              child: Icon(Icons.near_me_rounded)),
+              child: Icon(Icons.near_me_rounded,color: AppColors.whiteColor,)),
           actions: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -38,7 +38,7 @@ class WeatherByCityScreen extends StatelessWidget {
                   onTap: (){
                     NavigateTo(router: SearchScreen(),context: context);
                   },
-                  child: Icon(Icons.search)),
+                  child: Icon(Icons.search,color: AppColors.whiteColor,)),
             ),
           ],
 

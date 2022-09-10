@@ -34,7 +34,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
                         ),
                         child: TextFormField(
-                              style: TextStyle(color: AppColors.whiteColor,fontSize: 16),
+                              style: Theme.of(context).textTheme.bodyMedium,
                           controller: Searchcontroller,
                           onChanged: (value) {
                             cityName = value;
@@ -50,7 +50,7 @@ class _SearchScreenState extends State<SearchScreen> {
 
                           decoration: InputDecoration(
                             hintText: 'Search City ',
-                            hintStyle: TextStyle(color: Colors.white70),
+                            hintStyle: TextStyle(color: Colors.grey.shade400,fontSize: 14,fontWeight: FontWeight.w500),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(25),
                             ),
